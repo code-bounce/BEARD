@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@blader/ui-web/components/ui/dropdown-menu";
+} from "@blader/ui-web";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@blader/ui-web/components/ui/sidebar";
+} from "@blader/ui-web";
 
 export function NavProjects({
   projects,

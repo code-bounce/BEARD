@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@blader/ui-web/components/ui/collapsible";
+} from "@blader/ui-web";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -17,7 +17,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@blader/ui-web/components/ui/sidebar";
+} from "@blader/ui-web";
 
 export function NavMain({
   items,

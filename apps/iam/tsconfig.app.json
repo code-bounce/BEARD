@@ -27,7 +27,7 @@
     /* Path aliases */
     "baseUrl": ".",
     "paths": {
-      "@blader/ui-web": ["../../packages/ui-web"],
+      "@blader/ui-web": ["../../packages/ui-web/src"],
       "@blader/ui-web/*": ["../../packages/ui-web/src/*"]
     }
   },

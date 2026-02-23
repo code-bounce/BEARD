@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import "@blader/ui-web/styles/globals.css";
-import { TooltipProvider } from "@blader/ui-web/components/ui/tooltip";
-import { Toaster } from "@blader/ui-web/components/ui/sonner";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { TooltipProvider } from "@blader/ui-web";
+import { Toaster } from "@blader/ui-web";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";

@@ -49,6 +49,8 @@ if (!packageJson.dependencies) {
 }
 
 packageJson.dependencies["@blader/ui-web"] = "workspace:*";
+packageJson.dependencies["sonner"] = "^1.3.0";
+packageJson.dependencies["@tanstack/react-table"] = "^8.5.0";
 
 if (!packageJson.devDependencies) {
   packageJson.devDependencies = {};
@@ -128,11 +130,9 @@ const mainTsxPath = path.join(appDir, "src", "main.tsx");
 if (fs.existsSync(mainTsxPath)) {
   // Fall back to main.tsx if __root.tsx doesn't exist
   let mainContent = fs.readFileSync(mainTsxPath, "utf-8");
-  const globalsImport = 'import "@blader/ui-web/globals.css";';
-  const tooltipImport =
-    'import { TooltipProvider } from "@blader/ui-web/components/ui/tooltip";';
-  const toasterImport =
-    'import { Toaster } from "@blader/ui-web/components/ui/sonner";';
+  const globalsImport = 'import "@blader/ui-web/styles/globals.css";';
+  const tooltipImport = 'import { TooltipProvider } from "@blader/ui-web";';
+  const toasterImport = 'import { Toaster } from "@blader/ui-web";';
 
   let updated = false;
 
@@ -249,10 +249,8 @@ if (fs.existsSync(mainTsxPath)) {
 const layoutTsxPath = path.join(appDir, "src", "app", "layout.tsx");
 if (fs.existsSync(layoutTsxPath)) {
   let layoutContent = fs.readFileSync(layoutTsxPath, "utf-8");
-  const tooltipImport =
-    'import { TooltipProvider } from "@blader/ui-web/components/ui/tooltip";';
-  const toasterImport =
-    'import { Toaster } from "@blader/ui-web/components/ui/sonner";';
+  const tooltipImport = 'import { TooltipProvider } from "@blader/ui-web";';
+  const toasterImport = 'import { Toaster } from "@blader/ui-web";';
 
   let updated = false;
 
@@ -306,15 +304,15 @@ if (fs.existsSync(layoutTsxPath)) {
   }
 }
 
-// Install tailwindcss and @tailwindcss/vite
+// Install all packages with latest versions
 try {
-  console.log(`\n📦 Installing tailwindcss and @tailwindcss/vite...`);
-  execSync(`cd ${appDir} && bun add tailwindcss @tailwindcss/vite`, {
+  console.log(`\n📦 Installing all packages with latest versions...`);
+  execSync(`cd ${appDir} && bun update --latest`, {
     stdio: "inherit",
   });
-  console.log(`✓ Installed tailwindcss and @tailwindcss/vite`);
+  console.log(`✓ All packages installed and updated to latest versions`);
 } catch (error) {
-  console.error(`✗ Failed to install tailwindcss packages: ${error.message}`);
+  console.error(`✗ Failed to install packages: ${error.message}`);
 }
 
 console.log(

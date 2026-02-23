@@ -7,7 +7,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@blader/ui-web/components/ui/sidebar";
+} from "@blader/ui-web";
 
 export function NavSecondary({
   items,

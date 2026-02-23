@@ -9,11 +9,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@blader/ui-web/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@blader/ui-web";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,13 +18,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@blader/ui-web/components/ui/dropdown-menu";
+} from "@blader/ui-web";
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@blader/ui-web/components/ui/sidebar";
+} from "@blader/ui-web";
 
 export function NavUser({
   user,
